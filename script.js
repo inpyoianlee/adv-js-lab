@@ -13,6 +13,10 @@ class Animal {
         this.age = this.age++;
     }
 
+    GameOver() {
+      console.log(`The ${this.name} has passed away :'(`)
+    }
+
     print() {
         console.log(`This animal has ${this.legs} legs and is ${this.age} years old.`);
     }
@@ -102,7 +106,7 @@ class Reptile extends Animal {
     }
 
     BurrowMud() {
-      console.log(`The ${this.name} burrows into the surface of the wet, slimy mud! `);
+      console.log(`The ${this.name} burrows into the surface of the wet, slimy mud!`);
     }
 }
 
@@ -139,3 +143,4 @@ let Cartorhynchus = new Reptile('Cartorhynchus', 4, 5, false);
 Cartorhynchus.Gnaw();
 let Ceratops = new Reptile('Ceratops', 4, 10, true);
 Ceratops.BurrowMud();
+Ceratops.GameOver();
